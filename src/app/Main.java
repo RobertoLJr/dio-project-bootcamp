@@ -3,7 +3,6 @@ package app;
 import dio.br.com.project.domain.entities.*;
 
 import java.time.LocalDate;
-import java.util.ArrayList;
 import java.util.List;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
