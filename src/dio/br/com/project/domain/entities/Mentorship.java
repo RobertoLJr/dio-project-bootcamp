@@ -2,37 +2,11 @@ package dio.br.com.project.domain.entities;
 
 import java.time.LocalDate;
 
-public class Mentorship {
-    private Integer id;
-    private String title;
-    private String description;
+public class Mentorship extends Content {
     private LocalDate date;
 
     public Mentorship() {
-    }
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
+        super();
     }
 
     public LocalDate getDate() {
@@ -46,10 +20,15 @@ public class Mentorship {
     @Override
     public String toString() {
         return "Mentorship{" +
-                "id=" + id +
-                ", title='" + title + '\'' +
-                ", description='" + description + '\'' +
+                "id=" + getId() +
+                ", title='" + getTitle() + '\'' +
+                ", description='" + getDescription() + '\'' +
                 ", date=" + date +
                 '}';
+    }
+
+    @Override
+    public double calculateXp() {
+        return BASE_XP + 20;
     }
 }
